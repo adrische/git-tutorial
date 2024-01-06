@@ -89,6 +89,10 @@ git clean -n - show which files in the directory are not currently tracked (the 
 
 ## Configuring Git
 
+git config --list - settings. Additionally append `--local`, `--global`, or `--system` for different levels of settings (for one project, all projects, or all users).
+git config --global setting value - change a setting (for example user.name to a given value. Note, user.name is a global setting, `git config --local user.name value` will add an additional local user.name).
+
+
 
 
 ## Other topics
