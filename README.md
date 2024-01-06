@@ -2,7 +2,7 @@
 
 Some introductory notes to Git - mainly for own reference to look up the commands later because I tend to forget them. Hopefully these notes will be helpful to others, too.
 
-If you want to learn Git using these notes, a good idea is to create your own version of this file README.md while trying out the different commands - learning by doing :D
+If you want to learn Git using these notes, a good idea is to create your own version of this readme file while trying out the different commands - learning by doing :D
 
 
 ## Basic shell commands
@@ -146,9 +146,12 @@ git config --global alias.cm 'commit -m' - you can now execute `git cm "commit m
 
 ### Merging branches
 
-`git merge source destination` for example `git merge currentbranch main` will merge your current branch to the main branch
+`git merge sourcebranch destinationbranch` will merge two branches. For example `git merge currentbranch main` will merge your current branch to the main branch
 
-There are different merge types in Git, see [here](https://lukemerrett.com/different-merge-types-in-git/). For example, adding this line in an extra branch, but not making any changes in the main branch before merging will create a "fast forward merge".
+There are different merge types in Git, see https://lukemerrett.com/different-merge-types-in-git/. For example, adding this line in an extra branch, but not making any changes in the main branch before merging will create a "fast forward merge". (For some reason, the command `git diff fast-forward-merge-test main` only worked in the main branch, not in the fast-forward-merge-test branch where the commit was made.)
+
+
+### Tiny merge conflict example
 
 
 
