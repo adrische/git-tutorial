@@ -90,14 +90,10 @@ git clean -n - show which files in the directory are not currently tracked (the 
 ## Configuring Git
 
 git config --list - settings. Additionally append `--local`, `--global`, or `--system` for different levels of settings (for one project, all projects, or all users).
-git config --global setting value - change a setting (for example user.name to a given value. Note, user.name is a global setting, `git config --local user.name value` will add an additional local user.name).
+git config --global setting value - change a setting (for example user.name to a given value. Note, user.name is a global setting, `git config --local user.name value` will add an additional local user.name). Use single quotes '' for values with space.
 
 
-
-
-## Other topics
-
-### Setting your user name and email address
+### Interlude: Setting your user name and email address of an existing commit
 
 When doing the first commit, you may get this message:
 
@@ -125,7 +121,9 @@ To edit the file you need to hit Enter (edit mode). Then hit Esc (command mode) 
 After `git commit --amend --reset-author` you can check the user name and email address are correctly updated with `git config --list`.
 
 
+### Command alias
 
+git config --global alias.cm 'commit -m' - you can now execute `git ci
 
 
 
