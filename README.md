@@ -121,10 +121,16 @@ To edit the file you need to hit Enter (edit mode). Then hit Esc (command mode) 
 After `git commit --amend --reset-author` you can check the user name and email address are correctly updated with `git config --list`.
 
 
-### Command alias
+### Command aliases
 
-git config --global alias.cm 'commit -m' - you can now execute `git ci
+git config --global alias.cm 'commit -m' - you can now execute `git cm "commit message"` instead of `git commit -m "commit message"`
 
+
+## Branches
+
+`git branch` shows existing branches, the current branch is indicated with `*`
+
+`git checkout -b branchname` creates new branch, or changes to existing branch
 
 
 
