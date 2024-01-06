@@ -148,7 +148,7 @@ git config --global alias.cm 'commit -m' - you can now execute `git cm "commit m
 
 `git merge source destination` for example `git merge currentbranch main` will merge your current branch to the main branch
 
-
+There are different merge types in Git, see [here](https://lukemerrett.com/different-merge-types-in-git/). For example, adding this line in an extra branch, but not making any changes in the main branch before merging will create a "fast forward merge".
 
 
 
