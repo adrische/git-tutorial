@@ -129,6 +129,8 @@ git config --global alias.cm 'commit -m' - you can now execute `git cm "commit m
 
 ## Branches
 
+### Creating and changing branches
+
 `git branch` shows existing branches, the current branch is indicated with `*`
 
 `git checkout -b branchname` creates new branch and switches to it (fails, if a branch with that name already exists)
@@ -139,7 +141,12 @@ git config --global alias.cm 'commit -m' - you can now execute `git cm "commit m
 
 `git diff branch1 branch2` compares two branches (remember, before we used `git diff` to compare different commits in the same branch!)
 
+`git checkout branchname` without the `-b` flag will change to the given branch. You need to commit any changes in your current branch before you can change the branch. Trying to check out a non-existing branch fails (without the `-b` flag it will not be created)
 
+
+### Merging branches
+
+`git merge source destination` for example `git merge currentbranch main` will merge your current branch to the main branch
 
 
 
