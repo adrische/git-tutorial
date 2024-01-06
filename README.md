@@ -44,6 +44,7 @@ git log - see (entire) history of commits. `git log -3` 3 most recent commits on
 git diff file - compares changes since last staging of file to last staged version (if file has been staged with `git add file`, but not modified afterwards, nothing will be shown)
 git diff -r HEAD file - compares all changes to file since last commit to last commit (irrespective of staging)
 git diff -r HEAD - same, but for all files
+`git diff` without any arguments shows any changes that have not yet been staged
 
 git show first-few-characters-from-commit-hash - shows the commit (including diff of that commit). The identifier (hash) of the commit is visible with `git log`.
 
@@ -134,6 +135,9 @@ git config --global alias.cm 'commit -m' - you can now execute `git cm "commit m
 
 `git switch branchname` switch to different branch
 
+`git branch branchname` creates new branch (fails, if the name is already taken), but does not switch to the new branch
+
+`git diff branch1 branch2` compares two branches (remember, before we used `git diff` to compare different commits in the same branch!)
 
 
 
