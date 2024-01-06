@@ -130,7 +130,9 @@ git config --global alias.cm 'commit -m' - you can now execute `git cm "commit m
 
 `git branch` shows existing branches, the current branch is indicated with `*`
 
-`git checkout -b branchname` creates new branch, or changes to existing branch
+`git checkout -b branchname` creates new branch and switches to it (fails, if a branch with that name already exists)
+
+`git switch branchname` switch to different branch
 
 
 
