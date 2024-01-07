@@ -153,7 +153,45 @@ There are different merge types in Git, see https://lukemerrett.com/different-me
 
 ### Tiny merge conflict example
 
+Try to create a tiny merge conflict example:
 
+1. Create a new file with 3 lines
+2. Create a new branch and remove one line
+3. Back in main, delete a different line
+4. Try to merge into the main branch
+5. Examine the file after the failed merge
+6. Edit the file in main to produce the definitive version
+7. Repeat the merge command and examine the file again
+
+Possible solution:
+
+1.  `echo -e "Line 1\nLine 2\nLine 3" > conflict.txt` 
+    
+    `git add conflict.txt`
+    
+    `git commit -m "adding conflict.txt with 3 lines"`
+2.  `git checkout -b merge-conflict`
+   
+    `echo -e "Line 1\nLine 3" > conflict.txt`
+   
+    `git add conflict.txt`
+   
+    `git commit -m "removing line 2 from conflict.txt in merge-conflict branch"`
+3.  `git checkout main`
+    
+    `echo -e "Line 2\nLine 3" > conflict.txt`
+    
+    `git add conflict.txt`
+    
+    `git commit -m "removing line 1 from conflict.txt in main"`
+4.  `git merge merge-conflict main`
+5.  `cat conflict.txt`
+6.  `echo "Line 3" > conflict.txt`
+    
+    `git add conflict.txt`
+    
+    `git commit -m "only line 3 remains in conflict.txt after merge conflict"`
+7. `git merge merge-conflict main`
 
 
 
