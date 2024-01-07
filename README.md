@@ -170,13 +170,13 @@ Possible solution:
     `git add conflict.txt`
     
     `git commit -m "adding conflict.txt with 3 lines"`
-2.  `git checkout -b merge-conflict`
+2.  `git checkout -b merge-conflict-example`
    
     `echo -e "Line 1\nLine 3" > conflict.txt`
    
     `git add conflict.txt`
    
-    `git commit -m "removing line 2 from conflict.txt in merge-conflict branch"`
+    `git commit -m "removing line 2 from conflict.txt in merge-conflict-example branch"`
 3.  `git checkout main`
     
     `echo -e "Line 2\nLine 3" > conflict.txt`
@@ -184,14 +184,31 @@ Possible solution:
     `git add conflict.txt`
     
     `git commit -m "removing line 1 from conflict.txt in main"`
-4.  `git merge merge-conflict main`
+4.  `git merge merge-conflict-example main`
 5.  `cat conflict.txt`
 6.  `echo "Line 3" > conflict.txt`
     
     `git add conflict.txt`
     
     `git commit -m "only line 3 remains in conflict.txt after merge conflict"`
-7. `git merge merge-conflict main`
+7. `git merge merge-conflict-example main`
+
+
+## Creating repositiories
+
+`git init` creates new repository out of the current folder
+
+`git init new-folder-name` creates new sub-folder and makes a repository out of that new folder (if the folder already exists, and is already a Git repository, the message "Reinitialized existing Git repository" appears - I don't know what it does")
+
+`git clone path-to-repository` clones a local repository. Optionally, `git clone path-to-repository new-name` gives the newly created copy a different name than the original repository
+
+`git clone URL` to clone a remote repository. For example, `git clone ` to clone this tutorial (fix later)
+
+`git remote -v` display information about the original repository that was cloned from
+
+
+## Working with remote repositories
+
 
 
 
