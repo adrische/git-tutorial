@@ -229,6 +229,17 @@ Possible solution:
 
 ## Working with remote repositories
 
+`git fetch remote-name local-branch`, for example `git fetch origin main` - fetches the remote branch main
+
+`git merge origin main` - will locally merge the main branch of origin into your main branch
+
+`git pull origin main` - combined fetch & merge command
+
+`git push remote-name local-branch`, for example `git push origin main` - pushes your local main branch to the remote main branch (what happens if the local branch does not exist in the remote repository?)
+
+What if between pull and push more changes have been made to the remote repository? You would usually work in your own branch, and never actually directly commit to the main branch, but open a pull request.
+
+Not covered: `git stash` (and much more).
 
 
 
