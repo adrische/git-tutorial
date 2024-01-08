@@ -155,7 +155,7 @@ After `git commit --amend --reset-author` you can check the user name and email 
 
 `git diff branch1 branch2` - compares two branches (remember, before we used `git diff` to compare different commits in the same branch!)
 
-`git checkout branchname` without the `-b` flag will change to the given branch. You need to commit any changes in your current branch before you can change the branch. Trying to check out a non-existing branch fails (without the `-b` flag it will not be created)
+`git checkout branchname` without the `-b` flag will change to the given branch. You need to commit any changes in your current branch before you can change the branch. Trying to check out a nonexistent branch fails (without the `-b` flag it will not be created)
 
 
 ### Merging branches
@@ -214,7 +214,7 @@ Possible solution:
 7.  `git merge merge-conflict-example main`
 
 
-## Creating repositiories
+## Creating repositories
 
 `git init` - creates new repository out of the current folder
 
