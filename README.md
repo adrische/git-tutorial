@@ -222,7 +222,7 @@ Possible solution:
 
 `git clone path-to-repository` - clones a local repository. Optionally, `git clone path-to-repository new-name` gives the newly created copy a different name than the original repository
 
-`git clone URL` - to clone a remote repository. For example, `git clone ` to clone this tutorial (fix later)
+`git clone URL` - to clone a remote repository. For example, `git clone https://github.com/adrische/git-tutorial.git` to clone this tutorial
 
 `git remote -v` - display information about the original repository that was cloned from
 
